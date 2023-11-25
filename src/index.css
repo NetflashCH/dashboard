@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer base {
+    body {
+        font-family: 'Inter', sans-serif;
+        background: url('./assets/bg.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 100vh;
+        color: white;
+    }
+}
+
+
+@layer components {
+    li {
+        @apply flex
+    }
+
+    .header_link {
+        @apply flex items-center gap-4 text-white px-7 py-[1.1rem] text-[20px] font-bold w-[100%] transition duration-300
+    }
+
+    .header_link-active {
+        @apply bg-rose-900 hover:bg-rose-hover
+    }
+}
+
+
+li>a>img {
+    /* margin-top: -.3rem; */
+    width: 25px;
+}
+
+/* make me nth that will target the odd els */
+
+li:nth-child(2n-1)>a {
+    border-block: 2px solid #323232;
+}
+
+li>a {
+    border-right: 2px solid #323232;
+}
